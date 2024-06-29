@@ -56,6 +56,70 @@ class _DawerState extends State<Dawer> {
                 title: Text("Uplodes"),),
               ListTile(leading: Icon(Icons.mail),
                 title: Text("Mails"),),
+              
+              ExpansionTile(
+                  title: Row(
+                    children: [
+                      Icon(Icons.call, color: Colors.black,),
+                      SizedBox(width: 10,),
+                      Text("Call")
+                    ],
+                  ),
+                childrenPadding: EdgeInsets.only(left: 30),
+                children: [
+                  Padding(padding: EdgeInsets.only(left: 15),
+                   child: GestureDetector(
+                     onTap:((){
+
+                     }),
+                     child: Row(
+                       children: [
+                         Icon(Icons.add),
+                         SizedBox(width: 5,),
+                         Text("Add"),
+                       ],
+                     ),
+                   ),
+                  ),
+
+                  SizedBox(height: 5),
+
+                  Padding(padding: EdgeInsets.only(left: 15),
+                  child: GestureDetector(
+                    onTap: ((){
+
+                    }),
+                    child: Row(
+                      children: [
+                        Icon(Icons.access_alarm_rounded),
+                        SizedBox(width: 5,),
+                        Text("Alarm"),
+                      ],
+                    ),
+
+                  ),),
+
+                  SizedBox(height: 5),
+
+                  Padding(padding: EdgeInsets.only(left: 15),
+                    child: GestureDetector(
+                      onTap: ((){
+                        Navigator.of(context).pop();
+
+                      }),
+                      child: Row(
+                        children: [
+                          Icon(Icons.access_alarm_rounded),
+                          SizedBox(width: 5,),
+                          Text("Alarm"),
+                        ],
+                      ),
+
+                    ),),
+
+
+                ],
+              ),
 
               Divider(), //creates a border line
 
