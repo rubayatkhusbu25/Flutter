@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.light(),
-      home: Dawer(),
+      home: Dawer(),  // this will be change for executing each part of codes
       debugShowCheckedModeBanner: false,
     );
   }
