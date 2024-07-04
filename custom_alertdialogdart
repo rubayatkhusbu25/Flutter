@@ -1,0 +1,81 @@
+import 'package:flutter/material.dart';
+
+class CustomAlert extends StatefulWidget {
+  const CustomAlert({super.key});
+
+  @override
+  State<CustomAlert> createState() => _CustomAlertState();
+}
+
+class _CustomAlertState extends State<CustomAlert> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Custom AlertDialog"),
+        backgroundColor: Colors.green,
+      ),
+      body: Center(
+        child: ElevatedButton(
+          child: Text("Custom Alert"),
+          onPressed: (){
+            _showCustomAD(context);
+          },
+        ),
+      ),
+    );
+  }
+}
+
+void _showCustomAD (BuildContext context){
+  showDialog(
+      context: context,
+      builder: (BuildContext contest){
+        return Dialog(
+
+          //backgroundColor: Colors.yellow,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(4),
+          ),
+
+          child: Container(
+            height: 250,
+            child: Column(
+              children: [
+                /*Expanded(   // for showing icons in alertdialog
+                    child: Container(
+                      //color: Colors.white,
+                      child: Icon(Icons.account_balance_wallet_outlined, size: 60,color: Colors.redAccent,),
+                    )),*/
+                Image.asset("assets/cb.jpg",fit: BoxFit.cover,), // for showing images in alertdialog
+
+                Expanded(
+                    child: Container(
+                      color: Colors.redAccent,
+                      child: SizedBox.expand(
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Column(
+                            children: [
+                              Text("Weather Environment",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontFamily: "Times New Roman"),),
+                              SizedBox(height: 5),
+                              ElevatedButton(
+                                  onPressed: (){
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text("Okay"))
+                            ],
+                          ),
+                        ),
+                      ),
+                    ))
+              ],
+            ),
+          ),
+
+
+        );
+      });
+
+
+}
