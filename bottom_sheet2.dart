@@ -36,6 +36,13 @@ class _BottomSt2State extends State<BottomSt2> {
                   return SingleChildScrollView(
                     child: Column(
                       children: [
+                         SizedBox(height: 10,),
+                        Container(
+
+                          width: 50,
+                          height: 3,
+                          color: Colors.white,
+                        ),
                         Padding(
                           padding: EdgeInsets.zero,
                           child: ListTile(
